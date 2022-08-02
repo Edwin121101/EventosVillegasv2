@@ -6,7 +6,7 @@ include "utils.php";
 $dbConn =  connect($db);
 
 /*
-  listar todos los posts o solo uno
+  listar todas las categorias o solo una
  */
 if ($_SERVER['REQUEST_METHOD'] == 'GET')
 {
@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'PUT')
     $fields = getParams($input);
 
     $sql = "
-          UPDATE posts
+          UPDATE categoria
           SET $fields
           WHERE idcategoria='$postId'
            ";
